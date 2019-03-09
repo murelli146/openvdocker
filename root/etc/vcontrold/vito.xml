@@ -1,0 +1,153 @@
+<vito>
+    <devices>
+        <device ID="20C8" name="V200KW2" protocol="KW2"/>
+    </devices>
+    <commands>
+
+        <!-- Global -->
+        <command name='getSystemTime' protocmd='getaddr'>
+            <addr>088E</addr>
+            <len>8</len>
+            <unit>TI</unit>
+            <description>Ermittle Systemzeit</description>
+        </command>
+
+        <command name='getTempA' protocmd='getaddr'>
+            <addr>5525</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Aussentemperatur in Grad C</description>
+        </command>
+
+        <command name='getTempRaumSoll' protocmd='getaddr'>
+            <addr>0814</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Raumsolltemperatur in Grad C</description>
+        </command>
+
+
+        <!-- Boiler -->
+        <command name='getTempKist' protocmd='getaddr'>
+            <addr>0810</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <error>05 05</error>
+            <description>Ermittle die Kesseltemperatur in Grad C</description>
+        </command>
+
+        <command name='getTempAbg' protocmd='getaddr'>
+            <addr>0808</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Abgastemperatur in Grad C</description>
+        </command>
+
+
+
+        <command name='getBrennerStarts' protocmd='getaddr'>
+            <addr>088A</addr>
+            <len>2</len>
+            <unit>CO</unit>
+            <description>Ermittle die Brennerstarts</description>
+        </command>
+
+        <command name='getBrennerStunden' protocmd='getaddr'>
+            <addr>08A7</addr>
+            <len>4</len>
+            <unit>CS</unit>
+            <description>Ermittle die Brennerstunden</description>
+        </command>
+
+        <command name='getBrennerStunden1' protocmd='getaddr'>
+            <addr>0886</addr>
+            <len>4</len>
+            <unit>CS</unit>
+            <description>Ermittle die Brennerstunden Stufe 1</description>
+        </command>
+
+        <command name='getBrennerStunden2' protocmd='getaddr'>
+            <addr>08AB</addr>
+            <len>4</len>
+            <unit>CS</unit>
+            <description>Ermittle die Brennerstunden Stufe 2</description>
+        </command>
+
+        <command name='getPumpeStatusBr' protocmd='getaddr'>
+            <addr>7660</addr>
+            <len>1</len>
+            <unit>RT</unit>
+            <description>Ermittle den Status der internen Kesselpumpe</description>
+        </command>
+
+
+        <!-- DHW -->
+        <command name='getPumpeStatusSp' protocmd='getaddr'>
+            <addr>6513</addr>
+            <len>1</len>
+            <unit>RT</unit>
+            <description>Ermittle den Status der Speicherladepumpe</description>
+        </command>
+
+        <command name='getTempWW' protocmd='getaddr'>
+            <addr>0812</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Warmwassertemperatur in Grad C</description>
+        </command>
+
+
+        <!-- HC1 -->
+        <command name='getPumpeStatusHk1' protocmd='getaddr'>
+            <addr>2906</addr>
+            <len>1</len>
+            <unit>RT</unit>
+            <description>Ermittle den Status der Umwälzpumpe Heizkreis 1</description>
+        </command>
+
+        <command name='getTempVorlaufHk1' protocmd='getaddr'>
+            <addr>0810</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Volauftemperatur Heizkreis 1 in Grad C</description>
+        </command>
+
+        <command name='getTempRuecklaufHk1' protocmd='getaddr'>
+            <addr>080A</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Rücklauftemperatur Heizkreis 1 in Grad C</description>
+        </command>
+
+        <command name='getTempRaumSollHk1' protocmd='getaddr'>
+            <addr>0898</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <description>Ermittle die Raumsolltemperatur Heizkreis 1 in Grad C</description>
+        </command>
+
+
+        <!--
+        <command name='getTempAg' protocmd='getaddr'>
+                <addr>5527</addr>
+                <len>2</len>
+                <unit>UT</unit>
+                <description>Ermittle die gedämpfte Aussentemperatur in Grad C</description>
+        </command>
+        <command name='getTempRaumSoll' protocmd='getaddr'>
+            <addr>5502</addr>
+            <len>2</len>
+            <unit>UT</unit>
+            <error>05 05</error>
+            <description>Ermittle die Raumsolltemperatur in Grad C</description>
+        </command>
+        <command name='getBrennerStatus' protocmd='getaddr'>
+            <addr>551E</addr>
+            <len>1</len>
+            <unit>RT</unit>
+            <description>PRÜFEN:::Ermittle den Brennerstatus</description>
+        </command>
+        -->
+
+    </commands>
+</vito>
