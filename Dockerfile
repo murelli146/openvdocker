@@ -2,9 +2,5 @@ FROM debian:latest
 MAINTAINER Gernot Klobucaric <murelli146>
 COPY root / 
 ENV PORTCLI 3002
-ports:
-  - target: 3002
-    published: 3002
-    protocol: tcp
-    mode: host
+EXPOSE 3002/udp
 ENTRYPOINT ["sh","/etc/vcontrold/run.sh"]
