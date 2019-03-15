@@ -2,7 +2,7 @@
 
 Anbindung einer Viessmann Heizung über eine Optolinkschnittstelle.
 
-Verfügbar auf [GitHub](https://github.com/murelli146/knxdmxdocker) und [Docker Hub](https://hub.docker.com/r/murelli146/knxdmxdocker)
+Verfügbar auf [GitHub](https://github.com/murelli146/openvdocker) und [Docker Hub](https://hub.docker.com/r/murelli146/openvdocker)
 
 Es wird der vcontrold Server mit dem vclient zur Verfügung gestellt. Optional können die Werte in einem einstellbarem Intervall über Mqtt gepublisht werden.
 
