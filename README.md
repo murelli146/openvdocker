@@ -2,6 +2,8 @@
 
 Anbindung einer Viessmann Heizung über eine Optolinkschnittstelle.
 
+Verfügbar auf [GitHub](https://github.com/murelli146/knxdmxdocker) und [Docker Hub](https://hub.docker.com/r/murelli146/knxdmxdocker)
+
 Es wird der vcontrold Server mit dem vclient zur Verfügung gestellt. Optional können die Werte in einem einstellbarem Intervall über Mqtt gepublisht werden.
 
 Das Image wurde für den TWS2XXX der Firma [ElabNET](https://forum.timberwolf.io) auf Basis von Debian Stretch erstellt.
