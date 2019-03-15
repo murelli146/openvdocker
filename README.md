@@ -76,9 +76,10 @@ Zur Veranschaulichung, diese Zeile sieht letztlich beim Abfragen wie folgt aus:
 `mosquitto_pub -h 192.168.179.45 -p 1883 -t Vitoplus_300/getTempWWist -m 60.00000`
 
 ## ToDo
+```
 USB Optolink über Env einstellbar machen (auch über IP), derzeit Standart im Container /dev/ttyUSB1
 Werte sollen zukünftig über mqtt auch gesetzt werden können.
-
+```
 
 ## Image über git erstellen
 
