@@ -1,5 +1,7 @@
 FROM debian:latest
 MAINTAINER Gernot Klobucaric <murelli146>
+ARG DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND teletype
 RUN apt-get update && apt-get install -y mosquitto-clients
 COPY root / 
 ENV IPMQTTBROKER 192.168.179.45
