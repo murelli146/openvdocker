@@ -2,10 +2,10 @@
 
 Anbindung einer Viessmann Heizung über eine Optolinkschnittstelle.
 
-Die Information zur Konfiguration der Gerätetype findet im [openv Wiki](https://github.com/openv/openv/wiki)
+Es wird der vcontrold Server mit dem vclient zur Verfügung gestellt. Optional können die Werte in einem einstellbarem Intervall über Mqtt gepublisht werden.
 
 Das Image wurde für den TWS2XXX der Firma [ElabNET](https://forum.timberwolf.io) auf Basis von Debian Stretch erstellt.
-Die Konfiguration erfolgt über Portainer um den Dienst so einfach wie möglich zur Verfügung stellen zu können.
+Die Konfiguration erfolgt über Portainer um den Dienst so einfach wie möglich zur Verfügung zu stellen.
 
 Wer mich etwas unterstützen möchte:
 
@@ -21,7 +21,7 @@ Name: vcontrold-conf > "Create the Volume" drücken.
 ```
 Name: knxdmxdocker
 Image: murelli146/knxdmxdocker
-Port mapping: host 3002 -> container 3002
+Port mapping: host 3002 -> container 3002 TCP
 > "Deploy the Container"
 ```
 ## Container einstellen
@@ -49,6 +49,10 @@ Diese zwei Files müssen an die jeweilige Heizungstype angepasst werden.
 Die Informationen bekommt man über das [openv Wiki](https://github.com/openv/openv/wiki)
 Für die Konfiguration dieser Dateien kann hier kein Support erfolgen.
 
+Nun ist der vcontrold Server einsatzbereit und man kann über telnet (IP_vom_Host:3002) auf die vclient prompt zugreifen.
+
+Ist die Option Mqtt aktiviert muss man noch volgende Einstellungen vornehmen.
+
 ### 1_mqtt_commands.txt
 Befehlsliste die Abgerufen werden. 
 Die Zeilennummer entspricht der Variablen Nummer im Template (2_mqtt.tmpl)
@@ -68,11 +72,8 @@ Zur Veranschaulichung, diese Zeile sieht letztlich beim Abfragen wie folgt aus:
 
 `mosquitto_pub -h 192.168.179.45 -p 1883 -t Vitoplus_300/getTempWWist -m 60.00000`
 
-
-
-
-
-
+## ToDo
+Werte sollen zukünftig über mqtt auch gesetzt werden können.
 
 
 ## Image über git erstellen
