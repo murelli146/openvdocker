@@ -37,6 +37,7 @@ Env >
     MQTT            true                 Mqtt Option aktivieren oder deaktivieren
     MQTTPUB         30                   Zeit in Sekunden wie oft die Werte gepublisht werden (! Abfrageintervall)
 Restart policy > value: always
+Runtime & Resources > host: /var/husky/devices/FTDI_FT232R_USB_UART_AI0309KD   container: /dev/ttyUSB1
 > "Deploy the Container"
 ```
 
@@ -75,6 +76,7 @@ Zur Veranschaulichung, diese Zeile sieht letztlich beim Abfragen wie folgt aus:
 `mosquitto_pub -h 192.168.179.45 -p 1883 -t Vitoplus_300/getTempWWist -m 60.00000`
 
 ## ToDo
+USB Optolink über Env einstellbar machen (auch über IP), derzeit Standart im Container /dev/ttyUSB1
 Werte sollen zukünftig über mqtt auch gesetzt werden können.
 
 
