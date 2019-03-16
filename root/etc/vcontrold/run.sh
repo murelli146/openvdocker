@@ -1,9 +1,14 @@
 #!/bin/bash
-# Konfiguration
-#MQTT=true
-#MQTTPUB=30
+#########################################################
+#	openvdocker                                         #
+#		Date		: 15.03.2019                        #
+#		Version		: 1.00                              #
+#		Autor		: (c)2017 Gernot Klobucaric         #
+#		Kontakt		: forum.timberwolf.io               #
+#		Member		: murelli146                        #
+#########################################################
 
-vcontrold -x /etc/vcontrold/vcontrold.xml -d /dev/ttyUSB1 -P /var/run/vcontrold.pid
+vcontrold -x /etc/vcontrold/vcontrold.xml -d $OPTOLINK -P /var/run/vcontrold.pid
 status=$?
 pid=$(pidof vcontrold)
 if [ $status -ne 0 ];then

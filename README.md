@@ -28,9 +28,10 @@ Port mapping: host 3002 -> container 3002 TCP
 ```
 ## Container einstellen
 ```
-Command > Console: none
+Command > Console: Interactive & TTY
 Volumes mapping > container: /etc/vcontrold -> volume: vcontrold-conf
 Env >
+    OPTOLINK        /dev/ttyUSB1         Optolink Adapter
     IPMQTTBROKER    192.168.179.45       IP vom Mqtt Broker (z.B. mosquitto)
     PORTMQTTBROKER  1883                 Port vom Mqtt Broker
     MQTTTOPIC       Vitoplus_300         Topic Name (Ergebnis: z.B. Vitoplus_300/getTempA)
@@ -77,7 +78,6 @@ Zur Veranschaulichung, diese Zeile sieht letztlich beim Abfragen wie folgt aus:
 
 ## ToDo
 ```
-USB Optolink über Env einstellbar machen (auch über IP), derzeit Standart im Container /dev/ttyUSB1
 Werte sollen zukünftig über mqtt auch gesetzt werden können.
 ```
 

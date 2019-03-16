@@ -1,12 +1,4 @@
 #!/bin/sh
-#vclient -h 127.0.0.1 -p 3002 -f /etc/vcontrold/1_mqtt_commands.txt -t /etc/vcontrold/2_mqtt.tmpl -x /etc/vcontrold/3_mqtt_pub.sh
-#vclient -h 127.0.0.1 -p 3002 -f /etc/vcontrold/1_mqtt_commands.txt >>>>>>>>>>> OK mit Port
-#https://www.linuxquestions.org/questions/linux-server-73/telnet-fail-getaddrinfo-localhost-name-or-service-not-known-828644/
-#apt-get update
-#apt-get install mosquitto-clients
-#apt-get install net-tools
-#apt-get install nano
-#apt-get install telnet
 mosquitto_pub -h $IPMQTTBROKER -p $PORTMQTTBROKER -t $MQTTTOPIC/$C2 -m $2
 mosquitto_pub -h $IPMQTTBROKER -p $PORTMQTTBROKER -t $MQTTTOPIC/$C3 -m $3
 mosquitto_pub -h $IPMQTTBROKER -p $PORTMQTTBROKER -t $MQTTTOPIC/$C4 -m $4
