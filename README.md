@@ -21,8 +21,8 @@ Name: vcontrold-conf > "Create the Volume" drücken.
 
 ## Container erstellen:
 ```
-Name: knxdmxdocker
-Image: murelli146/knxdmxdocker
+Name: openvdocker
+Image: murelli146/openvdocker
 Port mapping: host 3002 -> container 3002 TCP
 > "Deploy the Container"
 ```
